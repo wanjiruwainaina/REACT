@@ -1,15 +1,34 @@
-import React from "react";
+// save the downloaded image to the asset file to access
+import React, { useState } from "react";
+// the house bellow is a variable
+import house from "../assets/house1.jpeg"
+// when importing another image we use a diffrent variable
+import house2 from "../assets/house2.jpeg"
+
 function Housecard() {
-    return(
-    <>
-        <div className="card" >
-            <img src="https://shop.westkenyarealestate.com/wp-content/uploads/2021/08/3.jpg" className="card-img-top" alt="..." />
-            <div className="card-body">
-                <h5 className="card-title">four bedroom</h5>
-                <p className="card-text">$3000 p.m</p>
-                <a href="#" className="btn btn-primary">Rent house</a>
+    
+    let [housetitle,setTitle] = useState("mansion")
+    let [location, setLocation] = useState("lavington")
+    let [price, setPrice] = useState(100000)
+
+
+    function changeprice() {
+        setPrice(400000)
+        setLocation("westlands")
+        setTitle("4 bedroom")
+    }
+    return (
+        <>
+            <div className="card" >
+                <img src={house2} className="card-img-top" alt="..." />
+                <div className="card-body">
+                    <h5 className="card-title">{housetitle}</h5>
+                    <p className="card-text">{price} p.m</p>
+                    <h5 className="card-title"> Location:{location}</h5>
+                    <button type="button" class="btn btn-outline-info" onClick={changeprice}>RENT HOUSE</button>
+
+                </div>
             </div>
-        </div>
-    </>)
+        </>)
 }
 export default Housecard
