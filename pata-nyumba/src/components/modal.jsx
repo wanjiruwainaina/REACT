@@ -1,4 +1,5 @@
 import React from "react";
+import Forms from "./forms";
 function Modal() {
     return(
         <>
@@ -13,11 +14,8 @@ function Modal() {
         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div className="modal-body">
-        <div className="form">
-            <form action="">
-                   <div><input type="text"name="sizeofhouse"placeholder="sizeofhouse"/></div>
-                   <div><input type="number"name="price"placeholder="budgetedprice"/></div>
-            </form>
+        <div>
+            <Forms/>
         </div>
       </div>
       <div className="modal-footer">
