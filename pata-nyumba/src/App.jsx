@@ -2,17 +2,19 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 // import './App.css'
-import Navbar from './components/navbar'
-import Housecard from './components/housecards'
+import Nyumba from './components/nyumba'
 import Cardcontainer from './components/cardscontainer'
+
 function App() {
+  const [count,setCount]= useState(0)
+
+
  
 return (
     <>
-    <Navbar/>
-    <Cardcontainer/>
+   <Cardcontainer/>
+   
     </>
   )
 }
-
 export default App
