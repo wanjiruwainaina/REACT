@@ -46,8 +46,8 @@ function App() {
   }
   return (
     <>
-
 <Counter count={count} increasefunction={increase} decreasefunction={decrease}resetfunction={reset}/>
+
     </>
   
   )

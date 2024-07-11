@@ -5,6 +5,7 @@ import house from "../assets/house1.jpeg"
 // when importing another image we use a diffrent variable
 import house2 from "../assets/house2.jpeg"
 import Likes from "./like";
+import Cardcontainer from "./cardscontainer";
 
 function Housecard({ house}) {
     
@@ -25,18 +26,31 @@ function addLikes(){
 
     return (
         <>
+        {
+            house ?
             <div className="card" >
                 <img src={house.img} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">{house.type}</h5>
-                    <p className="card-text">{house.price} p.m</p>
+                    <p className="card-text">{house.cost} p.m</p>
                     <h5 className="card-title"> Location:{house.location}</h5>
+                    <p>category:{house.cost>50000 ? "expensive": "cheap"}</p>
                     <h4>likes: {likes}</h4>
                     <button type="button" class="btn btn-outline-info" onClick={changeprice}>RENT HOUSE</button>
                     <button type = "button"class="btn btn-danger"onClick={addLikes}>likes</button>
-                     <Likes/>
+                     
                 </div>
             </div>
+            :
+            <div className="card" >
+                <img src={house.img} className="card-img-top" alt="..." />
+                <div className="card-body">
+                    <h5 className="card-title">no house</h5>
+                    <p className="card-text">no price</p>
+                    <h5 className="card-title">  no Location</h5>
+             </div>
+        </div>
+        }
         </>)
 }
 export default Housecard

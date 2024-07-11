@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 // import './App.css'
 import Nyumba from './components/nyumba'
 import Cardcontainer from './components/cardscontainer'
+import Navbar from './components/navbar'
 
 function App() {
   const [count,setCount]= useState(0)
@@ -12,6 +13,7 @@ function App() {
  
 return (
     <>
+    <Navbar/>
    <Cardcontainer/>
    
     </>
